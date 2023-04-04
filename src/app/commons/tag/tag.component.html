@@ -1,0 +1,21 @@
+<tui-tag
+  *ngIf="!routerLink; else linkTag"
+  class="loyalty-tag"
+  [class]="className"
+  [value]="text"
+  [size]="size"
+  status="custom"
+></tui-tag>
+<ng-template #linkTag
+  ><a
+    class="loyalty-tag loyalty-tag--link"
+    [routerLink]="routerLink"
+    [queryParams]="queryParams"
+    [class]="className"
+    [value]="text"
+    [size]="size"
+    tuiTag
+    status="custom"
+    >text</a
+  ></ng-template
+>

@@ -1,0 +1,85 @@
+.loyalty-tag {
+  --primary: rgb(var(--loyal-primary));
+  --secondary: rgb(var(--loyal-secondary));
+  --success: rgb(var(--loyal-success));
+  --warning: rgb(var(--loyal-warning));
+  --danger: rgb(var(--loyal-danger));
+  --info: rgb(var(--loyal-info));
+  --dark: rgb(var(--loyal-dark));
+  --light: rgb(var(--loyal-light));
+  --bg-default-clr: var(--primary);
+  --text-default-clr: white;
+  --lighten-ratio: 0.16;
+  --radius: 0.25rem;
+
+  background-color: var(--bg-status-clr, var(--bg-default-clr));
+  color: var(--text-status-clr, var(--text-default-clr));
+  font-family: var(--loyal-global-font-family);
+  font-weight: 600;
+  font-style: normal;
+  border-radius: var(--radius);
+
+  &__icon {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: unset;
+  }
+
+  &--link {
+    cursor: pointer;
+  }
+
+  &--primary {
+    --bg-status-clr: var(--primary);
+    &-light {
+      --bg-status-clr: rgb(var(--loyal-primary) / var(--lighten-ratio));
+      --text-status-clr: var(--primary);
+    }
+  }
+
+  &--secondary {
+    --bg-status-clr: var(--secondary);
+    &-light {
+      --bg-status-clr: rgb(var(--loyal-secondary) / var(--lighten-ratio));
+      --text-status-clr: var(--secondary);
+    }
+  }
+  &--success {
+    --bg-status-clr: var(--success);
+    &-light {
+      --bg-status-clr: rgb(var(--loyal-success) / var(--lighten-ratio));
+      --text-status-clr: var(--success);
+    }
+  }
+  &--warning {
+    --bg-status-clr: var(--warning);
+    &-light {
+      --bg-status-clr: rgb(var(--loyal-warning) / var(--lighten-ratio));
+      --text-status-clr: var(--warning);
+    }
+  }
+  &--danger {
+    --bg-status-clr: var(--danger);
+    &-light {
+      --bg-status-clr: rgb(var(--loyal-danger) / var(--lighten-ratio));
+      --text-status-clr: var(--danger);
+    }
+  }
+  &--info {
+    --bg-status-clr: var(--info);
+    &-light {
+      --bg-status-clr: rgb(var(--loyal-info) / var(--lighten-ratio));
+      --text-status-clr: var(--info);
+    }
+  }
+  &--dark {
+    --bg-status-clr: var(--dark);
+    &-light {
+      --bg-status-clr: rgb(var(--loyal-dark) / var(--lighten-ratio));
+      --text-status-clr: var(--dark);
+    }
+  }
+  &--light {
+    --bg-status-clr: var(--light);
+  }
+}
